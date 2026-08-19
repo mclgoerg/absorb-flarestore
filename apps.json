@@ -56,7 +56,7 @@
         },
         {
           "version": "1.9.2",
-          "buildVersion": "1.9.2",
+          "buildVersion": "217",
           "date": "2026-07-14T00:07:55Z",
           "downloadURL": "https://github.com/pounat/absorb/releases/download/v1.9.2/absorb-1.9.2-217.ipa",
           "size": 41619340,
@@ -128,7 +128,7 @@
         },
         {
           "version": "1.9.0",
-          "buildVersion": "1.9.0",
+          "buildVersion": "173",
           "date": "2026-06-09T20:56:29Z",
           "downloadURL": "https://github.com/pounat/absorb/releases/download/v1.9.0/absorb-1.9.0-173.ipa",
           "size": 32257675,
@@ -136,7 +136,7 @@
         },
         {
           "version": "1.8.97-pre",
-          "buildVersion": "1.8.97-pre",
+          "buildVersion": "172",
           "date": "2026-06-08T17:22:58Z",
           "downloadURL": "https://github.com/pounat/absorb/releases/download/v1.8.97-pre/absorb-1.8.97-172-pre.ipa",
           "size": 32236609,
