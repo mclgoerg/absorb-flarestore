@@ -6,7 +6,7 @@ The source follows Absorb's GitHub releases and keeps the available **version an
 
 ## Add to Feather
 
-<a href="feather://source/https://raw.githubusercontent.com/mclgoerg/absorb-flarestore/main/apps.json"><img src="./assets/add-to-feather.svg" alt="Add to Feather" height="56"></a>
+<a href="https://mclgoerg.github.io/absorb-flarestore/add-to-feather/"><img src="./assets/add-to-feather.svg" alt="Add to Feather" height="56"></a>
 
 If the button does not open Feather, add the source URL manually:
 
