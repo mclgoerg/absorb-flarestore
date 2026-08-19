@@ -9,7 +9,7 @@ import zipfile
 from pathlib import Path
 
 UPSTREAM = "pounat/absorb"
-SOURCE_REPO = "mclgoerg/absorb-flarestore"
+SOURCE_REPO = "mclgoerg/absorb-sideload"
 SOURCE_URL = f"https://raw.githubusercontent.com/{SOURCE_REPO}/main/apps.json"
 ICON_URL = "https://raw.githubusercontent.com/pounat/absorb/main/assets/icon/app_icon.png"
 API = f"https://api.github.com/repos/{UPSTREAM}/releases?per_page=100"
@@ -18,7 +18,7 @@ API = f"https://api.github.com/repos/{UPSTREAM}/releases?per_page=100"
 def request_json(url: str):
     headers = {
         "Accept": "application/vnd.github+json",
-        "User-Agent": "absorb-flarestore-updater",
+        "User-Agent": "absorb-sideload-updater",
         "X-GitHub-Api-Version": "2022-11-28",
     }
     token = os.environ.get("GITHUB_TOKEN")
@@ -30,7 +30,7 @@ def request_json(url: str):
 
 
 def download(url: str, destination: Path):
-    req = urllib.request.Request(url, headers={"User-Agent": "absorb-flarestore-updater"})
+    req = urllib.request.Request(url, headers={"User-Agent": "absorb-sideload-updater"})
     with urllib.request.urlopen(req, timeout=180) as response, destination.open("wb") as output:
         while True:
             chunk = response.read(1024 * 1024)
@@ -117,7 +117,7 @@ def main():
 
     source = {
         "name": "Absorb",
-        "identifier": "com.mclgoerg.absorb-flarestore",
+        "identifier": "com.mclgoerg.absorb-sideload",
         "sourceURL": SOURCE_URL,
         "apps": [
             {
