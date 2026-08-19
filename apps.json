@@ -1,7 +1,7 @@
 {
   "name": "Absorb",
-  "identifier": "com.mclgoerg.absorb-flarestore",
-  "sourceURL": "https://raw.githubusercontent.com/mclgoerg/absorb-flarestore/main/apps.json",
+  "identifier": "com.mclgoerg.absorb-sideload",
+  "sourceURL": "https://raw.githubusercontent.com/mclgoerg/absorb-sideload/main/apps.json",
   "apps": [
     {
       "name": "Absorb",
