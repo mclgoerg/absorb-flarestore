@@ -10,9 +10,11 @@ from pathlib import Path
 
 UPSTREAM = "pounat/absorb"
 SOURCE_REPO = "mclgoerg/absorb-flarestore"
-SOURCE_URL = f"https://raw.githubusercontent.com/{SOURCE_REPO}/main/apps.json"
+RAW_BASE = f"https://raw.githubusercontent.com/{SOURCE_REPO}/main"
+SOURCE_URL = f"{RAW_BASE}/apps.json"
 ICON_URL = "https://raw.githubusercontent.com/pounat/absorb/main/assets/icon/app_icon.png"
 API = f"https://api.github.com/repos/{UPSTREAM}/releases?per_page=100"
+ROLLBACK_COUNT = 3
 
 
 def request_json(url: str):
@@ -66,6 +68,35 @@ def parsed_version(tag: str):
     return value, value
 
 
+def app_entry(bundle_id: str, versions: list[dict], description: str):
+    current = versions[0]
+    return {
+        "name": "Absorb",
+        "bundleIdentifier": bundle_id,
+        "developerName": "Nathan Poulson",
+        "subtitle": "Audiobookshelf client for iOS",
+        "localizedDescription": description,
+        "iconURL": ICON_URL,
+        "version": current["version"],
+        "buildVersion": current["buildVersion"],
+        "downloadURL": current["downloadURL"],
+        "versions": versions,
+    }
+
+
+def write_source(path: str, name: str, identifier: str, source_url: str, app: dict):
+    source = {
+        "name": name,
+        "identifier": identifier,
+        "sourceURL": source_url,
+        "apps": [app],
+    }
+    Path(path).write_text(
+        json.dumps(source, ensure_ascii=False, indent=2) + "\n",
+        encoding="utf-8",
+    )
+
+
 def main():
     releases = request_json(API)
     versions = []
@@ -82,7 +113,6 @@ def main():
         if not ipa_assets:
             continue
 
-        # Prefer an asset whose name contains Absorb if multiple IPAs are ever published.
         ipa = next(
             (asset for asset in ipa_assets if "absorb" in asset.get("name", "").lower()),
             ipa_assets[0],
@@ -105,37 +135,47 @@ def main():
         raise RuntimeError("No Absorb GitHub release containing an IPA was found")
 
     metadata = inspect_ipa(latest_ipa_url)
+    bundle_id = metadata["bundleIdentifier"]
     latest = versions[0]
 
-    source = {
-        "name": "Absorb",
-        "identifier": "com.mclgoerg.absorb-flarestore",
-        "sourceURL": SOURCE_URL,
-        "apps": [
-            {
-                "name": "Absorb",
-                "bundleIdentifier": metadata["bundleIdentifier"],
-                "developerName": "Nathan Poulson",
-                "subtitle": "Audiobookshelf client for iOS",
-                "localizedDescription": "A modern cross-platform Audiobookshelf client. This unofficial source tracks IPA files published by the upstream Absorb GitHub releases.",
-                "iconURL": ICON_URL,
-                "version": latest["version"],
-                "buildVersion": latest["buildVersion"],
-                "downloadURL": latest["downloadURL"],
-                "versions": versions,
-            }
-        ],
-    }
-
-    Path("apps.json").write_text(
-        json.dumps(source, ensure_ascii=False, indent=2) + "\n",
-        encoding="utf-8",
+    write_source(
+        "apps.json",
+        "Absorb",
+        "com.mclgoerg.absorb-flarestore",
+        SOURCE_URL,
+        app_entry(
+            bundle_id,
+            versions,
+            "A modern cross-platform Audiobookshelf client. This unofficial source tracks IPA files published by the upstream Absorb GitHub releases.",
+        ),
     )
+
+    # AltStore-compatible sources cannot contain duplicate bundle identifiers.
+    # Generate separate one-app rollback sources for the three previous IPA builds.
+    rollback_versions = versions[1 : 1 + ROLLBACK_COUNT]
+    for index, rollback in enumerate(rollback_versions, start=1):
+        filename = f"rollback-{index}.json"
+        rollback_url = f"{RAW_BASE}/{filename}"
+        write_source(
+            filename,
+            f"Absorb Rollback {index}",
+            f"com.mclgoerg.absorb-flarestore.rollback-{index}",
+            rollback_url,
+            app_entry(
+                bundle_id,
+                [rollback],
+                f"Pinned rollback source for Absorb {rollback['version']} (build {rollback['buildVersion']}). Add this source temporarily when you want to install this older build.",
+            ),
+        )
+
+    # Remove stale rollback files if fewer than three prior IPA releases exist.
+    for index in range(len(rollback_versions) + 1, ROLLBACK_COUNT + 1):
+        Path(f"rollback-{index}.json").unlink(missing_ok=True)
 
     print(
         f"Generated apps.json with {len(versions)} IPA release(s); "
         f"latest {latest['version']} ({latest['buildVersion']}), "
-        f"bundle {metadata['bundleIdentifier']}"
+        f"bundle {bundle_id}; generated {len(rollback_versions)} rollback source(s)"
     )
 
 
