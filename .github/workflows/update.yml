@@ -5,9 +5,6 @@ on:
     branches: [main]
     paths-ignore:
       - apps.json
-      - rollback-1.json
-      - rollback-2.json
-      - rollback-3.json
   schedule:
     - cron: "17 */3 * * *"
   workflow_dispatch:
@@ -32,29 +29,24 @@ jobs:
         with:
           python-version: "3.x"
 
-      - name: Generate sources
+      - name: Generate source
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: python scripts/update.py
 
       - name: Validate JSON
-        run: |
-          python -m json.tool apps.json >/dev/null
-          for file in rollback-*.json; do
-            [ -e "$file" ] || continue
-            python -m json.tool "$file" >/dev/null
-          done
+        run: python -m json.tool apps.json >/dev/null
 
       - name: Commit changes
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add apps.json rollback-*.json
+          git add apps.json
 
           if git diff --cached --quiet; then
-            echo "Sources are already up to date."
+            echo "Source is already up to date."
             exit 0
           fi
 
-          git commit -m "Update Absorb sources"
+          git commit -m "Update Absorb source"
           git push
