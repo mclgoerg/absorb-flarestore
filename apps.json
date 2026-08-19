@@ -1,0 +1,324 @@
+{
+  "name": "Absorb",
+  "identifier": "com.mclgoerg.absorb-flarestore",
+  "sourceURL": "https://raw.githubusercontent.com/mclgoerg/absorb-flarestore/main/apps.json",
+  "apps": [
+    {
+      "name": "Absorb",
+      "bundleIdentifier": "com.barnabas.absorb",
+      "developerName": "Nathan Poulson",
+      "subtitle": "Audiobookshelf client for iOS",
+      "localizedDescription": "A modern cross-platform Audiobookshelf client. This unofficial source tracks IPA files published by the upstream Absorb GitHub releases.",
+      "iconURL": "https://raw.githubusercontent.com/pounat/absorb/main/assets/icon/app_icon.png",
+      "version": "1.9.3",
+      "buildVersion": "240",
+      "downloadURL": "https://github.com/pounat/absorb/releases/download/v1.9.3-240/absorb-1.9.3-240-pre.ipa",
+      "versions": [
+        {
+          "version": "1.9.3",
+          "buildVersion": "240",
+          "date": "2026-08-17T23:22:40Z",
+          "downloadURL": "https://github.com/pounat/absorb/releases/download/v1.9.3-240/absorb-1.9.3-240-pre.ipa",
+          "size": 42804148,
+          "localizedDescription": "# v1.9.3-240\r\n## Beta 6\r\n\r\n### Playback\r\n- Play from your headphones, the widget, the lock screen or AA/CP starts right away instead of waiting on the server, whether the book is downloaded or streamed\r\n- Starting a downloaded book from headphones or the widget with the app closed is much faster, instead of 5 to 10 seconds, and works with no signal at all\r\n- Pressing play **in the app** after a longer pause checks for progress made on another device before starting, and never jumps once audio is playing\r\n- The session-start rewind is applied before playback begins, so no more burst of audio and then a jump on a fresh start\r\n- Starting a downloaded book from a bookmark or chapter starts where you tapped instead of jumping ahead to the server position\r\n\r\n### Headphones\r\n- Headsets that report a play press as \"pause\" now resume when paused\r\n\r\n### Widget\r\n- The home screen widget shows paused when a call or another app interrupts playback, instead of counting on\r\n\r\n### Fix\r\n- Scrolling a dense library grid, or any screen full of covers, no longer crashes - the app now builds on Flutter 3.47, which also makes scrolling smoother"
+        },
+        {
+          "version": "1.9.3",
+          "buildVersion": "237",
+          "date": "2026-08-17T01:00:40Z",
+          "downloadURL": "https://github.com/pounat/absorb/releases/download/v1.9.3-237/absorb-1.9.3-237-pre.ipa",
+          "size": 42526921,
+          "localizedDescription": "# v1.9.3-237\r\n## Beta 5\r\n\r\n### Scan Series\r\n- Upcoming Releases is now Scan Series: a quick scan for upcoming books, or a deep scan that also finds missing books across every series\r\n- Scans learn which series are finished and skip them, so repeat scans take a fraction of the time\r\n- Get a notification the day a tracked book releases\r\n- Long-press to select several books and request or remove them together\r\n- Link a series by pasting its Audible ASIN when it can't be matched, and a scan report shows what was checked, skipped, or unmatched\r\n- The skipped list opens its actions with a tap and supports multi-select\r\n- Series scanning now works for Audible regions the metadata service doesn't cover, by falling back to the US catalog\r\n\r\n### Cross-device sync\r\n- Progress made on other devices catches up when you come back to the app, even for events missed while it was in the background\r\n- The paused player follows along too, so the card and resume point match where you left off elsewhere\r\n- Books finished on another device leave Absorbing right away\r\n- Progress reaches the server every 20 seconds instead of every minute\r\n\r\n### New\r\n- Cover size setting: small, medium, or large covers across the library, with tablets scaling to match and labels growing with the covers\r\n- Sort podcast episodes by publish date, title, season, episode number, or file name, in either direction\r\n- Reset or extend the sleep timer with a headphone button press during the wind-down\r\n- French language option, plus the latest community translations\r\n- Remove a book's cover and leave it with none\r\n- Pick several books on home or in the library and quick match, mark, or delete them at once\r\n- Admin: scan schedules, metadata source ordering, a server logs screen, and podcast episode limits\r\n- Admin: every Audible region can be picked as a library's metadata provider, plus custom providers from your server\r\n\r\n### Improved\r\n- The generated title card shows on the home shelves and no longer gets cut off on small covers\r\n- Bookmark, history, and chapter times show at your playback speed\r\n- Progress numbers stay readable on tinted home cards\r\n\r\n### Fix\r\n- A book's percentage on the server no longer drifts away from your actual listening position\r\n- Now Playing no longer sticks on the last chapter when rereading a finished book\r\n- Streams no longer cut out for a few seconds every hour\r\n- A stuck player no longer banks hours you never listened or drags your place in a book backwards\r\n- Chromecast reconnects after a background drop instead of dying for good\r\n- The companion ebook downloads with the audiobook, so Read works offline"
+        },
+        {
+          "version": "1.9.3",
+          "buildVersion": "233",
+          "date": "2026-08-05T22:16:07Z",
+          "downloadURL": "https://github.com/pounat/absorb/releases/download/v1.9.3-233/absorb-1.9.3-233-pre.ipa",
+          "size": 42238415,
+          "localizedDescription": "# v1.9.3-233\n## Beta 3\n\n### New\n- Short notifications can lower the volume instead of pausing\n- Queue auto-download for a series, show, playlist, or collection\n- Playlists and collections keep the next books downloaded as you listen\n- Delete books and episodes from the server, keeping or removing the files\n- Daily, weekly, and monthly listening goals run at once, with higher targets\n- Pick which day the week starts on\n- Subscribe to a podcast without new episodes filling up Absorbing\n\n### Improved\n- Auto-download list shows real names and collapses into a dropdown\n- Queue management uses more of the screen\n- GitHub release updater downloads the smaller APK made for your device (updating to this build still gets the universal APK, later ones get the build for your device)\n- Auto-delete settings say clearly that only items finished in Absorb are deleted\n- Swipe actions need a longer swipe and buzz before they fire\n- Playing within five minutes of a sleep timer undoes its rewind\n\n### Fix\n- Library switching and the Podcasts tab work when starting offline\n- Playback no longer blips when a login session refreshes\n- Covers load sooner in the full-screen player\n- Books finished on another device leave Absorbing; replayed ones stay\n- Queue auto-download actually downloads\n- Queued books resume where you left off after an auto-advance\n- End of chapter sleep timer stops at the chapter end, including the last one\n- Updating from an older version gets an APK that installs on any phone"
+        },
+        {
+          "version": "1.9.3",
+          "buildVersion": "227",
+          "date": "2026-07-29T21:47:00Z",
+          "downloadURL": "https://github.com/pounat/absorb/releases/download/v1.9.3-227/absorb-1.9.3-227-pre.ipa",
+          "size": 41889826,
+          "localizedDescription": "# v1.9.3-227\r\n## Beta 2\r\n\r\n### New\r\n- Audiobookshelf 2.36 support with password changes and signed-in device management\r\n- More library filters, sorting, and listening-session browsing\r\n- Book previews and admin controls for explicit/abridged metadata and file paths\r\n- Card scrubber modes\r\n- variable bitrate MP3 seeking option (Android)\r\n- Up Next and New podcast episode filters\r\n- Per-account server editing with custom headers\r\n- Book start and finish dates can be edited from book details\r\n\r\n### Improved\r\n- Account switching now reloads the correct library and stats behind a loading screen\r\n- Backups now restore per-library settings and the podcast tab correctly\r\n- Android Auto shows when the next book is loading\r\n- Android Auto search now finds partial book titles\r\n- Server admins can see when an Audiobookshelf update is available\r\n\r\n### Fix\r\n- Sessions stay signed in through token rotation and temporary connection problems\r\n- Audio restarts automatically if a server stream cuts out\r\n- Finished books stay out of Absorbing unless manually added or replayed\r\n- Skipping past the final chapter finishes the book\r\n- Playback, previews, episode downloads, and editor seeking are more reliable\r\n- Pausing during the sleep timer fade no longer triggers the sleep rewind\r\n- Home opens the book library correctly when the podcast tab is enabled\r\n- Android Auto no longer resumes downloaded books from an older position while offline\r\n- Author grids no longer have extra space between rows"
+        },
+        {
+          "version": "1.9.3",
+          "buildVersion": "220",
+          "date": "2026-07-24T00:21:19Z",
+          "downloadURL": "https://github.com/pounat/absorb/releases/download/v1.9.3-220/absorb-1.9.3-220-pre.ipa",
+          "size": 41686730,
+          "localizedDescription": "# v1.9.3-220\r\n## Beta 1\r\n\r\n### New\r\n- Quick Match in Edit Details for admins\r\n- Combined playlist and collection editing\r\n- Shareable sign-in links and QR codes for easier account setup\r\n\r\n### Improved\r\n- Absorb toasts throughout the app\r\n\r\n### Fix\r\n- More reliable downloads, including multi-file books\r\n- Stable covers and colors during artwork updates\r\n- Live updates with subdirectory server URLs\r\n- Login and token improvements\r\n- Android background podcast checks\r\n- Streamed books no longer go silent or jump back after progress sync\r\n- CarPlay no longer loads while disconnected\r\n- Better handling for malformed server URLs"
+        },
+        {
+          "version": "1.9.2",
+          "buildVersion": "1.9.2",
+          "date": "2026-07-14T00:07:55Z",
+          "downloadURL": "https://github.com/pounat/absorb/releases/download/v1.9.2/absorb-1.9.2-217.ipa",
+          "size": 41619340,
+          "localizedDescription": "# v1.9.2\r\n\r\n### New\r\n- Read ebooks right in the app, download them for offline reading, and turn pages with your volume buttons\r\n- A dedicated Podcasts tab with an Episodes view, new-episode notifications, and admin tools to edit shows and bulk-download episodes\r\n- The Android home screen widget resizes from a tile to a full player with live progress; iOS gets a new widget too\r\n- Pick your own app color, or match the book cover, with flat light and dark themes\r\n- A customizable stats page with Year in Review\r\n- In-app admin area for libraries, server settings, stats, uploads, and cleaning up missing items\r\n- Set cover shape and skip amounts per library, with optional long-skip buttons\r\n- Collections and playlists get their own Lists tab, with bulk-add and inline playback\r\n- Export a bookmark as an audio clip\r\n- AirPlay button on iPhone and iPad\r\n- Custom download folder picker on Android, for play store release\r\n- Long-press shortcuts on the bottom bar\r\n- See your listening sessions for any book or podcast\r\n- Lock the screen in portrait from Settings\r\n\r\n### Improved\r\n- Search is more forgiving of typos, word order, and punctuation\r\n- Now playing shows the chapter as the title everywhere - lock screen, notification, Android Auto, CarPlay, and widgets\r\n- Android Auto's Continue tab shows your downloaded books right away, in listening order, even offline\r\n- Backups now include ebook highlights and notes\r\n\r\n### Fix\r\n- Heavy battery use while paused\r\n- SSO login behind a proxy that needs custom headers\r\n- Falls back to the remote server when the local address stops answering\r\n- The equalizer no longer goes silent after switching books or updating the app\r\n- The app no longer opens a second time in your recent apps when you tap the notification\r\n- Downloads are more reliable and no longer get stuck in the queue\r\n- Multi-file downloaded audiobooks no longer reset to the start or block seeking\r\n- The library fills the whole screen on tablets now\r\n- Lockscreen, notification, and headset controls no longer stop responding after background playback finishes\r\n- The progress bar no longer overshoots your actual position while paused\r\n- Installing an update while listening no longer freezes the app on launch or leaves the widget stuck on playing"
+        },
+        {
+          "version": "1.9.1",
+          "buildVersion": "216",
+          "date": "2026-07-12T18:46:34Z",
+          "downloadURL": "https://github.com/pounat/absorb/releases/download/v1.9.1-216/absorb-1.9.1-216-pre.ipa",
+          "size": 41619409,
+          "localizedDescription": "# v1.9.1-216\r\n## Beta 8\r\n\r\n### New\r\n- Upload right from Absorb, with optional automatic metadata matching for book uploads\r\n- Admins can add podcast shows right from library search and open a show's server settings from its overflow menu\r\n- See running scans, metadata jobs, and other server activity from Server Admin\r\n- See listening sessions for books and podcasts\r\n\r\n### Improved\r\n- The 4x1 widget is tidier, with just the cover, title, and controls, plus a spinner while playback starts\r\n\r\n### Fix\r\n- Android Auto loads the library and downloads even when Absorb wasn't opened first\r\n- Supplementary ebooks in audiobooks-only libraries open instead of saying there is no ebook file\r\n- Rotation lock stays applied after reopening the app and leaving car mode\r\n- Duplicate book detail sheets no longer stack up"
+        },
+        {
+          "version": "1.9.1",
+          "buildVersion": "210",
+          "date": "2026-07-09T23:41:30Z",
+          "downloadURL": "https://github.com/pounat/absorb/releases/download/v1.9.1-210/absorb-1.9.1-210-pre.ipa",
+          "size": 41543107,
+          "localizedDescription": "# v1.9.1-210\r\n## Beta 7\r\n\r\n### New\r\n- Turn ebook pages with the volume buttons, sync offline reading when you reconnect, and back up highlights, notes, and reader settings\r\n- A dedicated Podcasts tab with an Episodes view, show editing and bulk-download tools for admins, and automatic new-episode notifications on Android\r\n- A new iOS home screen widget, plus a resizable Android widget with live progress and controls\r\n- Long-press shortcuts on the bottom bar for switching libraries, opening search, and toggling playback\r\n\r\n### Improved\r\n- Covers, titles, descriptions, search results, playlists, and authors now update live when they change on the server\r\n\r\n### Fix\r\n- Downloads no longer get stuck at 0% or return after being deleted\r\n- The Read button now finds ebooks correctly from the full-screen player\r\n- Rotation lock survives restarts, and custom library skip amounts apply immediately everywhere\r\n- The app, media controls, cards, and home screen widgets no longer get stuck or show stale times and playback after something finishes or a new build is installed"
+        },
+        {
+          "version": "1.9.1",
+          "buildVersion": "201",
+          "date": "2026-07-03T06:01:00Z",
+          "downloadURL": "https://github.com/pounat/absorb/releases/download/v1.9.1-201/absorb-1.9.1-201-pre.ipa",
+          "size": 41201359,
+          "localizedDescription": "# v1.9.1-201\r\n## Beta 6\r\n\r\n### New\r\n- Set cover shape and skip amounts per library, so an ebook library can show tall covers and podcasts can use their own skip lengths\r\n- Optional long-skip buttons on the player, for jumping further with your own custom amount (like 1 to 10 minutes)\r\n- Editing a book now suggests series, genres, and tags already in your library as you type\r\n- The Saved by speed stat shows when it started counting, and you can reset it to track a fresh period\r\n\r\n### Improved\r\n- The Most Listened stat now uses your all-time totals instead of just the recently loaded sessions\r\n- The download notification shows real progress for multi-file books\r\n\r\n### Fix\r\n- The progress bar no longer shows further ahead than it is while paused"
+        },
+        {
+          "version": "1.9.1",
+          "buildVersion": "200",
+          "date": "2026-07-01T20:59:09Z",
+          "downloadURL": "https://github.com/pounat/absorb/releases/download/v1.9.1-200/absorb-1.9.1-200-pre.ipa",
+          "size": 41176881,
+          "localizedDescription": "# v1.9.1-200\r\n## Beta 5\r\n\r\n### New\r\n- Now playing shows the chapter as the title, with author and book underneath, on the lock screen, notification, Android Auto, CarPlay, and the widget\r\n- New Lists tab to browse all your collections and playlists, sortable by name, date, or size\r\n     - Replaces the old collections/playlists filter view from last beta\r\n- Bulk-add books to a collection or playlist by searching and tapping\r\n- Choose where new podcast episodes land in your queue\r\n- New 1x1 widget that plays and pauses on tap\r\n\r\n### Improved\r\n- Search is more forgiving of word order, punctuation, typos, and subtitles\r\n- eBook search is more accurate, and your theme and page are remembered across app switches\r\n- The ebook reader opens more smoothly from the home card\r\n- The widget's progress bar now matches your chapter or full book progress setting\r\n\r\n### Fix\r\n- Download and finished badges no longer overlap small covers in search results\r\n- Books in a collapsed sub-series show in their own order\r\n- Collection and playlist sheet buttons are easier to tap, and reordering no longer lags\r\n- eBooks no longer sometimes open to a blank page\r\n- The Read button appears on the home card as soon as an ebook is added\r\n- The now-playing widget no longer crashes the app on Android 17"
+        },
+        {
+          "version": "1.9.1",
+          "buildVersion": "197",
+          "date": "2026-06-24T21:26:51Z",
+          "downloadURL": "https://github.com/pounat/absorb/releases/download/v1.9.1-197/absorb-1.9.1-197-pre.ipa",
+          "size": 41383955,
+          "localizedDescription": "# Beta 4\r\n\r\n## Ebook reading\r\n- **New** - Read ebooks right in the app. Tap Read on a book to open it.\r\n- **New** - Read offline. Downloading a book now grabs its ebook too, and ebook-only books can be downloaded on their own.\r\n\r\n## Fixes\r\n- **Fix** - Multi-file downloaded audiobooks no longer reset to the start or block seeking.\r\n- **Fix** - The library fills the whole screen on tablets now instead of loading one row and waiting for a scroll.\r\n- **Fix** - Short home shelves no longer snap past the first book when you scroll back to the start.\r\n\r\n## Tweaks\r\n- Cleaner Finished and Downloaded badges on covers."
+        },
+        {
+          "version": "1.9.1",
+          "buildVersion": "188",
+          "date": "2026-06-20T17:43:18Z",
+          "downloadURL": "https://github.com/pounat/absorb/releases/download/v1.9.1-188/absorb-1.9.1-188-pre.ipa",
+          "size": 35850268,
+          "localizedDescription": "# v1.9.1-188\r\n## Beta 3\r\n\r\n- **New** - Export a bookmark as an audio clip. Trim it to just the part you want and save it to your files. On iPhone and iPad, the book needs to be downloaded first.\r\n- **New** - AirPlay button in the player on iPhone and iPad, so you can send audio to a speaker or TV without leaving the app.\r\n- **New** - Lock the screen to portrait if you don't want it rotating (Settings, Appearance).\r\n- **New** - New toggle that turns on auto-download for a series when you start a book in it, so the next few books download ahead (Settings, Downloads).\r\n- **New** - Year in Review on the stats page. Pick a year to see your listening time, books finished, top authors and genres, your top narrator, busiest month, longest book finished, and a wall of the covers you listened to.\r\n- **New** - Collections and Playlists are now on the library page. Open the library sort/filter, switch to the new Lists tab, and tap one to view it right in the library (with a chip to clear back). Playlists and collections can be played as a queue right from there.\r\n- **Fix** - The book cover now shows in the player notification the first time you stream a book.\r\n- **Fix** - In Android Auto, the Continue list is now ordered by what you played most recently, matching the app, instead of download order.\r\n- **Fix** - Backing up your settings now carries over more of your setup (card background style, stats layout, and the newer toggles) and no longer stores bookmarks, since those already sync with your server.\r\n- **Fix** - Books with no chapters now show a single progress bar with the title, like podcasts with no chapters, instead of an empty chapter bar.\r\n- **Fix** - Tapping Chapters on a book or podcast that has none now tells you there are no chapters, instead of nothing happening."
+        },
+        {
+          "version": "1.9.1",
+          "buildVersion": "179",
+          "date": "2026-06-17T22:56:10Z",
+          "downloadURL": "https://github.com/pounat/absorb/releases/download/v1.9.1-179/absorb-1.9.1-179-pre.ipa",
+          "size": 31903302,
+          "localizedDescription": "# v1.9.1 beta 2\r\n\r\n- **New** - Set color theme: flat (no-gradient) light and dark modes, and you can set the app's color yourself. pick a preset or use the color wheel, or keep it dynamic to follow the book cover. Plus a background intensity slider and an option to use your color everywhere.\r\n- **New** - In-app admin area: manage libraries, change server settings, and view stats and listening sessions.\r\n- **New** - Edit and delete listening sessions from the stats screen.\r\n- **Fix** - Recent listening time is no longer lost if the app is closed mid-playback.\r\n- **Fix** - Bookmarks made offline no longer disappear on the next sync. #278 \r\n- **Fix** - The equalizer no longer goes silent after switching books or updating the app.\r\n- **Fix** - An incomplete download no longer resets your place to the middle of the book. #278 \r\n- **Fix** - Downloaded books now count as local plays, so offline listening is credited to the right day. #280 #276 \r\n- **Fix** - The app no longer opens a second time in your recent apps when you tap the player notification. #279 \r\n- **Fix** - The local metadata lookup text is readable in light mode now.\r\n- **Fix** - Podcast Sessions always report with episode title\r\n- **Fix** - iOS fix double audio #285 \r\n- Stop another app taking over when you resume iOS playback after a pause"
+        },
+        {
+          "version": "1.9.1",
+          "buildVersion": "176",
+          "date": "2026-06-13T21:28:22Z",
+          "downloadURL": "https://github.com/pounat/absorb/releases/download/v1.9.1-176/absorb-1.9.1-176-pre.ipa",
+          "size": 31764065,
+          "localizedDescription": "## v1.9.1 beta 1\r\n\r\n- **New** - You can now pick a custom download folder ( android only - works on the Play Store version too (hopefully when approved)) through your phone's folder picker, with no special permissions. Downloads are sorted into author and title folders.\r\n- **Fix** - Downloads are more reliable in the background and no longer get stuck in the download list.\r\n- **Fix** - Fixed heavy battery use while paused. The app no longer keeps the CPU awake when you pause, so leaving it paused (even overnight) won't eat your battery.\r\n- **New** - Customizable stats page, with listening goals, chart styles, challenge pace, weekday averages, and time saved by listening faster.\r\n- **New** - Hide a book from your finished-this-year stats.\r\n- **New** - Admins can export a setup file to sign a new user in.\r\n- **Fix** - Seeking and resume position now work right when casting multi-file books.\r\n- **Fix** - SSO login works on servers behind a proxy that needs custom headers.\r\n- **Fix** - Falls back to your remote server instead of showing offline when the local address stops answering.\r\n- **Improved** - Podcast episode titles show in the expanded Newest Episodes view, and badges update right after you finish an episode.\r\n- **Improved** - Send-to-e-reader device list scrolls\r\n- **Improved** - Server switch and session-expired messages use absorb style toast message\r\n- **Improved** - The login screen now shows why a server connection failed instead of just \"could not reach server\""
+        },
+        {
+          "version": "1.9.0",
+          "buildVersion": "1.9.0",
+          "date": "2026-06-09T20:56:29Z",
+          "downloadURL": "https://github.com/pounat/absorb/releases/download/v1.9.0/absorb-1.9.0-173.ipa",
+          "size": 32257675,
+          "localizedDescription": "# v1.9.0\r\n\r\nEditing tools for your books, more controls in the car, and a native engine on iOS.\r\n\r\n### Books\r\n- **New** - A new Edit page brings all the book tools together: metadata, cover, chapters, match, Encode, and Embed.\r\n- **New** - Chapter editor to rename chapters and set their times, with play-preview to set starts by ear.\r\n- **New** - Embed Metadata tool (admin) writes tags, chapters, and cover art into your audio files.\r\n- **New** - Pick which fields to apply when matching a book to server metadata.\r\n- **New** - Remove a book from Continue Listening, or a series from Continue Series.\r\n- **New** - Long-press a cover for a quick menu with Play, Download, and more, without opening the full page.\r\n\r\n### Android Auto & CarPlay\r\n- **New** - Chapter skip, playback speed, and one-tap bookmark controls. The speed button shows your current rate and cycles your presets.\r\n- **New** - Browse big libraries by letter, and tap a book to jump straight to Now Playing.\r\n\r\n### Playback\r\n- **New** - Sleep timer option to stop at the end of the current podcast episode.\r\n- **New** - Lock the seek bar so you can't scrub by accident from the notification, lockscreen, or car.\r\n- **Fix** - Podcast queue Up Next now works, and a podcast no longer switches to an audiobook when an episode ends.\r\n\r\n### Player\r\n- **New** - Card background: show the cover art blurred or as a gradient behind the player, or turn it off.\r\n\r\n### iOS\r\n- **New** - Native audio engine, with a properly advancing background queue.\r\n\r\n### Bookmarks\r\n- **New** - Roomier editor with a bigger note field, fine time nudging, and a Listen button to hear the spot without jumping to that position.\r\n\r\n### Admin\r\n- **New** - API Keys to create, view, and revoke keys\r\n\r\n### Translations\r\n- **New** - Absorb is now open for community translation on [Crowdin](https://crowdin.com/project/absorb)\r\n\r\n### Also in this release\r\n- Local overrides now show everywhere, a Progress text-size setting, blue/green connection icons, in-place server-address editing, a tidier admin Users page, plus smaller fixes and polish throughout."
+        },
+        {
+          "version": "1.8.97-pre",
+          "buildVersion": "1.8.97-pre",
+          "date": "2026-06-08T17:22:58Z",
+          "downloadURL": "https://github.com/pounat/absorb/releases/download/v1.8.97-pre/absorb-1.8.97-172-pre.ipa",
+          "size": 32236609,
+          "localizedDescription": "### CarPlay & Android Auto\r\n- **New** - Browse big libraries by letter, so nothing gets cut off, and big libraries no longer crash\r\n- **New** - Tapping a book jumps straight to Now Playing\r\n\r\n### Bookmarks\r\n- **New** - Roomier editor with a bigger note field, fine time nudging (synced to the server), and a Listen button to hear the spot without losing your place\r\n- **Fix** - The bookmarks page and in-player sheet no longer hang\r\n\r\n### Metadata & covers\r\n- **New** - Choose which fields to apply when matching a book to server metadata\r\n- **New** - Local metadata and cover overrides now show everywhere, not just the book page\r\n- **Fix** - A cover's yellow \"Only from Audible\" badge no longer throws off the accent color\r\n\r\n### Upcoming releases\r\n- **New** - Add or remove books on the Upcoming Releases page\r\n\r\n### Player\r\n- **New** - Lock the seek bar so you can't scrub by accident from the notification, lockscreen or car\r\n\r\n### Admin\r\n- **New** - Unlink a user's OpenID (#229)\r\n- **New** - Edit a saved server's address in place, without re-adding it (#257)"
+        },
+        {
+          "version": "1.8.96",
+          "buildVersion": "1.8.96",
+          "date": "2026-06-05T04:20:28Z",
+          "downloadURL": "https://github.com/pounat/absorb/releases/download/v1.8.96/absorb-1.8.96%2B166.ipa",
+          "size": 32194956,
+          "localizedDescription": "# v1.8.96\r\n\r\nMore playback controls when you're behind the wheel - chapter skips, a live speed button, and quick one-tap bookmarks.\r\n\r\n---\r\n\r\n### Android Auto & Apple CarPlay\r\n- **New** - Chapter skip, playback speed, and bookmark controls, on top of the usual play and skip.\r\n- **New** - The speed button shows your current rate (like 1.5x) and cycles through your speed presets.\r\n- **New** - Bookmark straight from the car, with a quick on-screen confirmation.\r\n\r\n### Playback\r\n- **New** - (Android) A setting to pick whether the phone's media controls show chapter skip, or speed and bookmark."
+        },
+        {
+          "version": "1.8.95",
+          "buildVersion": "1.8.95",
+          "date": "2026-06-05T01:11:33Z",
+          "downloadURL": "https://github.com/pounat/absorb/releases/download/v1.8.95/absorb-1.8.95%2B163.ipa",
+          "size": 32181526,
+          "localizedDescription": "# v1.8.95\r\n\r\nThe book \"...\" menu now has a dedicated **Edit** page that brings all the book tools together - metadata, cover, chapters, match, Encode, and Embed - in one place.\r\n\r\n- **New** - Chapter editor: edit chapter titles and times, with a play-preview to set starts by ear.\r\n- **New** - Embed Metadata tool (admin) to write tags, chapters, and cover art into your audio files, with live progress.\r\n- **New** - Remove a book from Continue Listening, or a whole series from Continue Series, from the book \"...\" menu.\r\n\r\n> This is for books for now. Podcast editing is coming in a later release.\r\n\r\n---\r\n\r\n### Admin\r\n- **New** - API Keys: create, view, and revoke keys for apps and scripts that connect to your server, right from the admin page.\r\n- **Improved** - the Users page is now a grid of name pills, with online users outlined in green and a last-seen time on each.\r\n\r\n### Playback\r\n- **New** - sleep timer option to stop at the end of the current podcast episode, without affecting the rest of your queue.\r\n- **Fix** - opening Absorb no longer pauses audio playing in other apps before you've pressed play.\r\n- **Fix** - playback now pauses when you disconnect the device you're listening through, even if another Bluetooth device stays connected.\r\n- **Fix** - sleep timer rewinds now show as an auto-rewind in the playback history instead of looking like a manual seek.\r\n\r\n### Appearance\r\n- **New** - a Progress text size setting (Settings > Appearance) to enlarge the time and percent text on the player, including the chapter times.\r\n\r\n### Translations\r\n- **New** - more German translations, thanks to the community on [Crowdin](https://crowdin.com/project/absorb)."
+        },
+        {
+          "version": "1.8.91",
+          "buildVersion": "1.8.91",
+          "date": "2026-05-30T15:09:44Z",
+          "downloadURL": "https://github.com/pounat/absorb/releases/download/v1.8.91/absorb-1.8.91%2B159.ipa",
+          "size": 32005716,
+          "localizedDescription": "### Playback\r\n- **Fix** - podcast queue Up Next now works and updates as you change the queue\r\n- **Fix** - a podcast no longer switches to an audiobook when an episode ends\r\n- **Fix** - Android Auto no longer phantom-resumes Absorb after you disconnect\r\n- **New** - default speed can now be set in 0.05 steps\r\n\r\n### Sleep timer\r\n- **New** - Auto resume default slider now in the sleep timer settings\r\n\r\n### Connection\r\n- **New** - Local server setup now has a Set button so it's clear when your address is saved\r\n- **New** - connection icon is blue for a local server and green for remote\r\n\r\n### iOS\r\n- **Fix** - background queue now advances correctly\r\n- **New** - native audio engine\r\n\r\n### Translations\r\n- **New** - Absorb is now open for community translation on [Crowdin](https://crowdin.com/project/absorb) - help translate the app into your language\r\n- Thanks to [Engi](https://crowdin.com/profile/engifrance) (French) and [Frumkin](https://crowdin.com/profile/frumkin) (Russian) for the first community translations"
+        },
+        {
+          "version": "1.8.90",
+          "buildVersion": "1.8.90",
+          "date": "2026-05-24T01:50:56Z",
+          "downloadURL": "https://github.com/pounat/absorb/releases/download/v1.8.90/absorb-1.8.90%2B134.ipa",
+          "size": 30889555,
+          "localizedDescription": "# v1.8.90\r\n\r\n### Landscape mode\r\n- **New** - The whole app works in landscape, with a two-pane layout for the absorbing screen, full player, and car mode.\r\n\r\n### Library\r\n- **New** - Narrators tab next to Authors.\r\n- **New** - Filter library by tag, with tappable tag chips on book detail.\r\n- **New** - Search library tags and genres.\r\n- **New** - Filter the Series tab by progress.\r\n\r\n### Queue & playlist\r\n- **New** - Playlist queue mode plays through a playlist in order, with an \"Up next\" indicator on the Absorbing page.\r\n\r\n### Ebooks\r\n- **New** - Send to E-Reader from the book detail menu for any book with an ebook file. Picks the device automatically when you have one configured, shows a picker when there's more than one.\r\n\r\n### ReadMeABook\r\n- **New** - Connect your RMAB instance under Settings or Admin to request books from inside the app, with a \"My Requests\" tab to track status.\r\n\r\n### Audio\r\n- **New** - Skip Silence toggle in the EQ sheet (Android only).\r\n- **New** - Pick a specific chapter to sleep at on the sleep timer.\r\n- **New** - Edit the quick-pick speed chips in the speed sheet.\r\n\r\n### Admin\r\n- **New** - SMTP and ereader device management page on server settings page\r\n- **New** - Admins (not just root) can now reach Settings -> Admin Controls, the manage button on podcast libraries, add to collection, edit author, and edit / reorder collections. Destructive actions still need the delete permission from root, but they now show a clear message if you don't have it.\r\n- **New** - Multiple series per book and editable tags in the metadata editor.\r\n- **New** - Edit an author or quick-match against Audible from the author sheet.\r\n- **New** - Start an M4B encode from the edit server details sheet.\r\n\r\n### Language & appearance\r\n- **New** - Choose the app language manually in Settings.\r\n- **New** - Classic wording toggle: swap \"Absorb / Absorbing / Fully Absorbed\" for \"Play / Now Playing / Finished\".\r\n\r\n### fixes & improvements \r\n- **Fix** - In-app updater actually downloads and installs the APK directly now, no more browser hang\r\n- **Fix** - Notification, lock screen, and Bluetooth controls stay alive after a long pause.\r\n- **Fix** - Offline listening progress no longer regresses after returning to your home network.\r\n- **Fix** - No more ghost 10-hour-long listening sessions on the server.\r\n- Offline bookmarks no longer wipe on app restart before they sync.\r\n- iOS: last chapter of multi-file audiobooks no longer skips, and Bluetooth skip controls now work.\r\n- Offline downloaded podcasts open with correct duration and seek bar.\r\n- Android Auto / CarPlay: series sort by sequence number, cover updates show after browse, AA back nav keeps scroll position.\r\n- \"Hey Google, rewind a minute\" no longer snaps back.\r\n- Switching libraries no longer stops playback when Unified Absorbing page is enabled."
+        },
+        {
+          "version": "1.8.89",
+          "buildVersion": "1.8.89",
+          "date": "2026-05-22T22:17:44Z",
+          "downloadURL": "https://github.com/pounat/absorb/releases/download/v1.8.89/absorb-1.8.89%2B133.ipa",
+          "size": 30833588,
+          "localizedDescription": "# v1.8.89\r\n\r\n### Queue & playlist (new)\r\n- **New** - Playlist queue mode. Tap \"Play playlist\" on any playlist to start playing through its items in order. Each item auto-plays the next when finished.\r\n- **New** - \"Up next\" indicator on the Absorbing page tells you what plays next under the queue chip. Toggle in the manage queue sheet to hide it.\r\n- **New** - The manage queue sheet now matches the active mode. It shows your series in sequence (auto-next mode) or the playlist's items (playlist mode) instead of always showing the manual queue.\r\n\r\n### Android Auto & CarPlay\r\n- **Fix** - Series view sorts books by sequence number, so book 2 comes before book 10.\r\n- **Fix** - Cover changes on the server now show up after the next browse, and re-downloading a book pulls a fresh cover too.\r\n\r\n### Android Auto\r\n- **Fix** - Back navigation keeps your scroll position instead of jumping to the top.\r\n\r\n### Playback & sync\r\n- **Fix** - \"Hey Google, rewind a minute\" no longer jumps back to where you were a moment later.\r\n- **Fix** - No more ghost 10-hour-long listening sessions appearing on the server.\r\n- **Fix** - Stop silently dropping unsynced local progress when the server and local both have unsynced changes.\r\n- **Fix** - The sync no longer loops retrying when local and server are at the same position.\r\n- **Fix** - Sleep timer countdown ticks every second instead of every five.\r\n- **Fix** - Skip controls from Bluetooth devices now work on iOS.\r\n\r\n### Other\r\n- **Fix** - Non-admin users with the \"Update\" permission can now edit metadata in the app (fixes #225).\r\n- **Update** - \"Merge libraries\" setting renamed to \"Unified Absorbing page\" to make it clear it only affects what shows on the Absorbing page. Follows the \"classic wording\" toggle too."
+        },
+        {
+          "version": "1.8.87",
+          "buildVersion": "1.8.87",
+          "date": "2026-05-19T03:31:21Z",
+          "downloadURL": "https://github.com/pounat/absorb/releases/download/v1.8.87/absorb-1.8.87%2B129.ipa",
+          "size": 30798070,
+          "localizedDescription": "# v1.8.87\r\n\r\n### New\r\n- **Feature** - ReadMeABook integration. Set it up under Settings or Admin with your RMAB URL and an API token, then request books directly from the app. A \"My Requests\" tab inside the RMAB tile tracks the status of everything you've sent.\r\n- **Feature** - \"Request via ReadMeABook\" appears under the empty library search state, at the bottom of library search results, in the Upcoming Releases per-book menu, and on missing books in an Audible series.\r\n\r\n### Fixes\r\n- **Fix** - Tapping a tag or genre chip from a book detail sheet opened inside the full player now closes the player and lands on the filtered library.\r\n- **Fix** - Tapping a tag or genre chip right after opening the app no longer shows the default library; the filter applies on the first try."
+        },
+        {
+          "version": "1.8.85",
+          "buildVersion": "1.8.85",
+          "date": "2026-05-15T22:15:35Z",
+          "downloadURL": "https://github.com/pounat/absorb/releases/download/v1.8.85/absorb-1.8.85%2B128.ipa",
+          "size": 31782618,
+          "localizedDescription": "# v1.8.85\r\n\r\n### New\r\n- **Feature** - Filter library by tag, with tappable tag chips on book detail to jump to that tag's library view (#210).\r\n- **Feature** - Search library tags and genres; tap a result to open the filtered library.\r\n- **Feature** - Filter the Series tab by progress: in progress, finished, or not started.\r\n- **New** - Unfinished-episode count badge on podcast show tiles and an \"X unfinished\" chip on the show sheet.\r\n- **Feature** - Edit tags on the metadata edit sheet (root only).\r\n- **Feature** - Start an M4B encode from the edit server details sheet, with codec / bitrate / channels presets (root only).\r\n- **Feature** - Classic wording toggle in Appearance settings: swap \"Absorb / Absorbing / Fully Absorbed\" for \"Play / Now Playing / Finished\" throughout the app.\r\n\r\n### Improvements\r\n- **Better** - Better experience hiding the header and app nav bar when scrolling on the home & library page.\r\n\r\n### Fixes\r\n- **Fix** - Bottom nav bar no longer disappears after visiting Stats then scrolling Home/Library (#221)."
+        },
+        {
+          "version": "1.8.84",
+          "buildVersion": "1.8.84",
+          "date": "2026-05-13T16:20:20Z",
+          "downloadURL": "https://github.com/pounat/absorb/releases/download/v1.8.84/absorb-1.8.84%2B126.ipa",
+          "size": 31698222,
+          "localizedDescription": "# v1.8.84\r\n\r\n### Landscape mode\r\n- **New** - The whole app now works in landscape.\r\n  - Absorbing screen and the full-screen player swap to a two-pane layout with the cover on one side and the controls on the other.\r\n  - Car mode does the same and is no longer locked to portrait.\r\n\r\n### Library\r\n- **New** - Narrators tab next to Authors. Tap a name to see all books they've narrated.\r\n  - Narrator names in the book detail sheet are now tappable links to the same view.\r\n  - Library search now matches narrators too.\r\n- **New** - Edit an author or run quick-match against Audible right from the author sheet (root admin only).\r\n\r\n### Language\r\n- **New** - Choose the app language manually in Settings (English, Deutsch, 中文, or system default).\r\n  - Includes a link to help translate the app on Crowdin.\r\n\r\n### Fixes\r\n- **Fix** - Bookmarks made offline no longer get wiped after the app restarts before they sync.\r\n- **Fix** - iOS: last chapter of multi-file audiobooks no longer gets skipped at the end of playback (#219).\r\n- **Fix** - Offline downloaded podcasts open properly from the Downloaded Episodes list, show the right duration and seek bar, and appear in the Absorbing tab. Playback also starts instantly instead of waiting on a server timeout (#218)."
+        },
+        {
+          "version": "1.8.82",
+          "buildVersion": "1.8.82",
+          "date": "2026-05-10T18:21:22Z",
+          "downloadURL": "https://github.com/pounat/absorb/releases/download/v1.8.82/absorb-1.8.82%2B121.ipa",
+          "size": 31620274,
+          "localizedDescription": "### Sync\r\n- **Fix** - Offline listening progress no longer regresses after returning to your home network. Your local position now stays put until it's safely synced to the server.\r\n\r\n### Language\r\n- **Fix** - App now falls back to English when your system language isn't supported, instead of German."
+        },
+        {
+          "version": "1.8.81",
+          "buildVersion": "1.8.81",
+          "date": "2026-05-08T19:18:17Z",
+          "downloadURL": "https://github.com/pounat/absorb/releases/download/v1.8.81/absorb-1.8.81%2B120.ipa",
+          "size": 31620389,
+          "localizedDescription": "### Playback\r\n- **Fix** - Notification, lock screen, and Bluetooth controls stay alive after a long pause. The 1.8.80 attempt only caught one of the paths that was killing them; this catches the other one. If you were still seeing dead controls after a long pause on 1.8.80, please try this build.\r\n- **Fix** - Play responds instantly right after you pause. A guard meant to catch phantom resumes from Bluetooth / Android Auto disconnect was firing on every pause, including normal ones, and blocking the next play for 5 seconds.\r\n\r\n### Sleep timer\r\n- **New** - Pick a specific chapter to sleep at. New Chapter tab on the sleep timer sheet shows every chapter with its estimated wall-clock end time, and you can choose start or end of the chapter. Thanks to @Lauraisgreat97 for the contribution!"
+        },
+        {
+          "version": "1.8.80",
+          "buildVersion": "1.8.80",
+          "date": "2026-05-07T23:57:20Z",
+          "downloadURL": "https://github.com/pounat/absorb/releases/download/v1.8.80/absorb-1.8.80%2B119.ipa",
+          "size": 31545879,
+          "localizedDescription": "# v1.8.80\r\n\r\n### Audio\r\n- **New** - Skip Silence toggle in the EQ sheet trims quiet gaps from playback. Follows your per-book EQ setting. Android only for now.\r\n- **New** - Edit the quick-pick speed chips in the speed sheet. Tap **+** to save the current speed as a preset, long-press a chip to remove it. Reset from Settings > Playback.\r\n- **Improved** - Switching libraries no longer stops playback when Merge Libraries is enabled. Browse other libraries while your audiobook keeps playing.\r\n- **Fixed** - Notification, widget, and Bluetooth controls no longer go dead after a long pause. Previously the only fix was force-restarting the app. (I'm hoping this fixes it for those users who have reported external media controls that stop working. It hasn't happened to me, so please let me know if it keeps happening. \r\n\r\n### Admin\r\n- **New** - Metadata editor supports multiple series per book. Tap \"Add series\" to add another.\r\n- **New** - ReadMeABook integration. Paste your RMAB URL with a login token in admin Manage to open RMAB inside Absorb, signed in automatically via the token.\r\n  - Lives on the admin page since that felt fitting for admin users managing the server's RMAB instance.\r\n\r\n### Settings\r\n- **New** - Settings > Advanced > ReadMeABook lets any user open their own RMAB instance to request books, using a personal login URL their server admin provides.\r\n  - It's an in-app webview that opens a fixed URL. ReadMeABook is what I use for book requests, so it's the first one supported. A token auth URL is the best choice so you don't have to log in every time.\r\n  - Lives in Advanced for regular users who just have request access."
+        },
+        {
+          "version": "1.8.79",
+          "buildVersion": "1.8.79",
+          "date": "2026-05-03T18:14:24Z",
+          "downloadURL": "https://github.com/pounat/absorb/releases/download/v1.8.79/absorb-1.8.79%2B115.ipa",
+          "size": 31468908,
+          "localizedDescription": "# v1.8.79\r\n\r\n### Offline / slow server\r\n- **Fix** - Downloaded books now start playing almost instantly when your server is unreachable, instead of waiting on a doomed network call.\r\n- **Fix** - App boot is faster when the server is unreachable.\r\n- **Fix** - CarPlay and Android Auto load with your downloads instantly. Server-fed sections (Continue, New, Library) fill in when the server responds.\r\n\r\n### iOS\r\n- **Fix** - Lock screen now shows the downloaded book's cover, including offline.\r\n- **Fix** - CarPlay shows downloaded book covers in the browse list.\r\n- **Fix** - CarPlay only shows the Downloads tab when the server is offline (no more swiping past empty Continue / New / Library).\r\n- **Fix** - CarPlay sometimes came up blank on the first connect; now renders the browse tree reliably.\r\n\r\n### Other\r\n- **Fix** - Audible rating now sticks once it loads instead of disappearing on later opens when Audnexus has a hiccup.\r\n- **New** - Playback history sheet has a \"Show more\" toggle that reveals sync and session events."
+        },
+        {
+          "version": "1.8.78",
+          "buildVersion": "1.8.78",
+          "date": "2026-04-30T05:05:26Z",
+          "downloadURL": "https://github.com/pounat/absorb/releases/download/v1.8.78/absorb-1.8.78%2B111.ipa",
+          "size": 31457761,
+          "localizedDescription": "# v1.8.78\r\n\r\n### Login\r\n- **New** - Log in with your Audiobookshelf API key instead of username and password.\r\n- **Fix** - Fresh login now refreshes your account data instead of carrying over the previous account's.\r\n\r\n### Android Auto and CarPlay\r\n- **New** - \"New\" tab shows newly added books and the latest podcast episodes.\r\n- **Fix** - CarPlay sometimes hung on a loading spinner when tapping items.\r\n- **Fix** - Tapping a book in CarPlay browse now plays it.\r\n- **Fix** - Custom headers (e.g. Cloudflare Access service tokens) now sent on Android Auto requests (#195).\r\n\r\n### iOS\r\n- **Fix** - EQ no longer silences certain audiobooks (low-bitrate AAC files).\r\n- **Fix** - Home screen widget play button stopped working a few seconds after pausing.\r\n\r\n### Podcasts\r\n- **Fix** - Subscribed podcasts check for new episodes when you reopen the app, no need to force-close.\r\n- **Fix** - Subscription downloads now land in the correct library.\r\n\r\n### Server\r\n- **Fix** - Smarter switching between local and remote server.\r\n- **Fix** - Playback when your server uses a router base path. (E.g, **my.domain.org/abs**)\r\n\r\n### Misc\r\n- **Fix** - Rewind no longer jumps forward when you press play after rewinding.\r\n- **Fix** - Book numbers missing when opening a series from the author page.\r\n- **Fix** - Admin - Adding a podcast from chart recommendations.\r\n- **Fix** - Skip buttons no longer get flipped on certain phones. (OnePlus)\r\n- **Fix** - Manual queue mode: next book in a series goes to the end of your cards instead of jumping in line, disrupting the queue order"
+        },
+        {
+          "version": "1.8.77",
+          "buildVersion": "1.8.77",
+          "date": "2026-04-26T03:35:46Z",
+          "downloadURL": "https://github.com/pounat/absorb/releases/download/v1.8.77/absorb-1.8.77%2B101.ipa",
+          "size": 31311191,
+          "localizedDescription": "# v1.8.77\r\n\r\n### Stats\r\n- **New** - Home screen stats widget for Android (listening time and finished books at a glance).\r\n- **New** - Browse the books you've finished this year right from the stats page.\r\n- **Fix** - Pause timeout no longer pads server listening time with empty seconds.\r\n- **Fix** - Cast listening time now actually shows up on the server (foreground service avoids Doze throttling) (#184).\r\n- **Fix** - No more duplicate offline listening sessions when coming back online.\r\n- **Fix** - Offline listening time no longer inflates 10-20x during server outages.\r\n\r\n### Continue Listening\r\n- **Update** - Redesigned as vertical tiles, tinted with each book's cover color and a soft matching glow.\r\n\r\n### Player card\r\n- **New** - Drag-to-configure button grid replaces fixed presets. Drag buttons between visible/hidden zones, toggle icons-only, place \"More\" inline.\r\n- **New** - Reset button in settings to restore default button layout.\r\n- **New** - Download button option for the absorbing card.\r\n\r\n### Equalizer\r\n- **New** - iOS now has full EQ, bass boost, loudness, and mono.\r\n- **New** - Per-book / per-podcast EQ - toggle in the equalizer sheet, saves per item.\r\n- **Update** - Friendly frequency names on EQ bands (Sub, Bass, Mids, High, Air).\r\n- **Fix** - EQ no longer leaks across user accounts on the same device.\r\n\r\n### App-icon shortcuts\r\n- **New** - Long-press the app icon for quick actions: Play, Search, Downloads, Bookmarks (Android + iOS).\r\n\r\n### Sleep timer\r\n- **New** - Shake sensitivity setting (Very low to Very high) under Settings > Sleep Timer (#185).\r\n- **Fix** - Auto sleep timer now restarts when settings change (#175).\r\n\r\n### Android Auto\r\n- **Fix** - Podcast progress bar now appears right away instead of after a minute.\r\n- **Fix** - Phantom resume after disconnecting Android Auto or unplugging headphones.\r\n\r\n### Server & sync\r\n- **Fix** - No more flapping between local and remote server on shaky WiFi.\r\n- **Fix** - Library refreshes automatically when the active server switches - no more pulling to refresh.\r\n- **Fix** - Sync no longer hammers the server during outages and gets stuck in backoff.\r\n\r\n### Playback\r\n- **Fix** - Auto-rewind no longer gets erased on resume at >1.0x speeds.\r\n- **Fix** - Audio pumping artifacts and quiet Android playback (#177).\r\n- **Fix** - iOS nav bar disappearing after playing a podcast episode.\r\n- **Fix** - Book detail sheet hanging on cover art and becoming undismissable.\r\n- **Fix** - \"Hide eBook-only titles\" filter no longer breaks library pagination (#154).\r\n- **Fix** - No-cover books no longer block the detail sheet.\r\n- **Fix** - Force-transcode for Dolby Atmos files.\r\n\r\n### Library & home\r\n- **Fix** - Books no longer show as missing right after they're added to the library.\r\n- **Update** - Date sort is now remembered between visits to Upcoming Releases.\r\n- **Update** - Bookmark page now caches book titles - no more UUID flash.\r\n\r\n### Localization\r\n- **New** - Foundation for community translations is in place. Simplified Chinese (zh) included - thanks @blacktea1891! Crowdin project coming soon for contributors to add more languages.\r\n\r\n### Misc\r\n- **Fix** - Absorbing list and card button layout no longer bleed between accounts.\r\n- **New** - Haptic feedback on drag-reorder (button grid and queue).\r\n- **Fix** - Bitmap memory leak in home screen widgets."
+        },
+        {
+          "version": "1.8.76",
+          "buildVersion": "1.8.76",
+          "date": "2026-04-25T21:26:40Z",
+          "downloadURL": "https://github.com/pounat/absorb/releases/download/v1.8.76/absorb-1.8.76.ipa",
+          "size": 31314387,
+          "localizedDescription": "# v1.8.76\r\n\r\n### Stats\r\n- **New** - Home screen stats widget for Android (listening time and finished books at a glance).\r\n- **New** - Browse the books you've finished this year right from the stats page.\r\n- **Fix** - Pause timeout no longer pads server listening time with empty seconds.\r\n\r\n### Continue Listening\r\n- **Update** - Redesigned as vertical tiles, tinted with each book's cover color and a soft matching glow.\r\n\r\n### Tips & onboarding\r\n- **New** - Dismissible tips throughout the app, with a reset option in settings.\r\n- **Update** - Simplified welcome dialog.\r\n\r\n### Local server\r\n- **Fix** - No more flapping between local and remote on shaky WiFi.\r\n- **Fix** - Library refreshes automatically when the server switches - no more pulling to refresh.\r\n\r\n### Playback\r\n- **Fix** - No more phantom resume after unplugging headphones or disconnecting Android Auto."
+        },
+        {
+          "version": "1.8.75",
+          "buildVersion": "1.8.75",
+          "date": "2026-04-23T15:33:31Z",
+          "downloadURL": "https://github.com/pounat/absorb/releases/download/v1.8.75/absorb-1.8.75.ipa",
+          "size": 30954146,
+          "localizedDescription": "# v1.8.75\r\n\r\n### Android Auto\r\n  - **Fix** - Podcast progress bar now appears right away instead of after a minute.\r\n### Sleep timer\r\n  - New **Shake sensitivity** setting (Very low → Very high) under Settings → Sleep Timer. Default is Medium, slightly more responsive than before (#185).\r\n### Upcoming releases\r\n  - Date sort is now remembered between visits.\r\n### Player card (icon-only layout)\r\n  - Speed button now shows the current speed when it's not 1.0x (icon stays for default).\r\n  - Sleep timer button now shows the remaining time while a timer is active."
+        },
+        {
+          "version": "1.8.74",
+          "buildVersion": "1.8.74",
+          "date": "2026-04-21T15:41:36Z",
+          "downloadURL": "https://github.com/pounat/absorb/releases/download/v1.8.74/Absorb.ipa",
+          "size": 30948701,
+          "localizedDescription": "# v1.8.74\r\n\r\n- **Listening stats**\r\n  - Cast listening time now actually shows up on the server\r\n    - Turns out Android was Doze-throttling the sync timer while the screen was locked, so it only caught a fraction of what you actually played. Added a tiny foreground service during cast to keep the process awake (#184).\r\n  - Fixed a bug where coming back online after offline playback could post your listening time twice.\r\n- **Multi-account**\r\n  - EQ settings no longer reset when you switch between user accounts on the app. Previously the in-memory state would leak across accounts and overwrite the other user's saved settings."
+        },
+        {
+          "version": "1.8.73",
+          "buildVersion": "1.8.73",
+          "date": "2026-04-20T02:33:50Z",
+          "downloadURL": "https://github.com/pounat/absorb/releases/download/v1.8.73/Absorb.ipa",
+          "size": 30945804,
+          "localizedDescription": "# v1.8.73\r\n\r\n- **Localization**\r\n  - Every screen and dialog in the app can now be translated - paving the way for more community languages. Big shoutout to Claude for handling the grunt work; I was not looking forward to doing this one by hand.\r\n  - Simplified Chinese (zh) localization - thanks @blacktea1891!"
+        },
+        {
+          "version": "1.8.72",
+          "buildVersion": "1.8.72",
+          "date": "2026-04-18T01:46:21Z",
+          "downloadURL": "https://github.com/pounat/absorb/releases/download/v1.8.72/alpha-absorb-1.8.72.ipa",
+          "size": 30831443,
+          "localizedDescription": "# v1.8.72\r\n- App-icon long-press shortcuts on Android and iOS: Play, Search, Downloads, Bookmarks\r\n- Equalizer, bass boost, loudness, and mono now supported on iOS (per-book if enabled)\r\n- Fix phantom audio resume after disconnecting from Android Auto\r\n- Fix iOS nav bar disappearing after playing a podcast episode\r\n- Fix book detail sheet hanging on cover art and becoming undismissable\r\n- Fix \"Hide eBook-only titles\" filter breaking library pagination (GH-154)\r\n- Fix auto sleep timer not restarting when settings change (#175)\r\n- Fix offline listening time inflating 10-20x during server outages\r\n- Cloud icon now reflects actual server reachability (periodic ping while online)\r\n- Fix auto-rewind being erased on resume at >1.0x playback speeds"
+        },
+        {
+          "version": "1.8.71",
+          "buildVersion": "1.8.71",
+          "date": "2026-04-15T16:42:53Z",
+          "downloadURL": "https://github.com/pounat/absorb/releases/download/v1.8.71/Absorb.ipa",
+          "size": 30710160,
+          "localizedDescription": "﻿# v1.8.71\r\n- Add optional rewind on session start (rewinds by max rewind amount when starting a new playback session)\r\n- Add per-book/podcast EQ (toggle in equalizer sheet, saves EQ settings per item) (EQ is still Android only for now. iOS EQ coming soon)\r\n- Show friendly frequency names on EQ bands (Sub, Bass, Mids, High, Air)\r\n- Add download button option for absorbing card\r\n- Replace fixed button layout presets with dynamic drag-to-configure grid\r\n  - Drag buttons between visible and hidden zones to control what shows on the card\r\n  - Icons-only toggle for compact display\r\n  - \"More\" in grid toggle to place the overflow button inline\r\n  - Predefined row groupings for clean layouts at every count (1-9)\r\n  - Reset button in settings to restore defaults\r\n- Fix bitmap memory leak in home screen widgets\r\n- Add haptic feedback on drag-to-reorder (button grid and queue)"
+        },
+        {
+          "version": "1.8.70",
+          "buildVersion": "1.8.70",
+          "date": "2026-04-14T01:54:53Z",
+          "downloadURL": "https://github.com/pounat/absorb/releases/download/v1.8.70/Absorb.ipa",
+          "size": 30683168,
+          "localizedDescription": "# v1.8.70\r\n\r\n## New Features\r\n\r\n### Series Discovery\r\n- **Find Missing Books** - discover books missing from your series via Audible with owned/upcoming badges and region selector\r\n- **Upcoming Releases** - scan Audible for upcoming and recently released books across all your series, with background scanning, cached results, and calendar integration\r\n\r\n### Downloads\r\n- Downloads scoped to active library instead of showing all libraries\r\n\r\n### Streaming\r\n- Streaming cache enabled by default (256 MB) and larger audio buffer for fewer network requests\r\n\r\n### Updates\r\n- Pre-release update toggle in Advanced settings (GitHub build only)\r\n\r\n### Logging\r\n- Device info prepended to log files for easier bug reports\r\n\r\n### UI\r\n- Square covers show blurred background instead of cropping rectangular art\r\n- Download indicator moved off cover art, shows subtle \"Saved\" label\r\n\r\n---\r\n\r\n## Bug Fixes\r\n\r\n### Chromecast\r\n- Fix progress bar on multi-file books\r\n- Fix card disappearing on brief network hiccups\r\n- Fix metadata loss on session reconnect\r\n\r\n### Playback\r\n- Fix ~20 second delay resuming from headphones/notification after long pause\r\n- Fix cold-start resume failure via headphones/lockscreen\r\n- Fix resuming from old position after listening on another client\r\n- Fix Dolby Atmos audiobooks playing silently (7.1.4 and 5.1.4 downmix)\r\n- Fix bluetooth resume not showing player card after 10+ minutes idle\r\n- Fix speed-adjusted time on inactive expanded cards\r\n- Fix auto rewind undone by server position sync on resume\r\n- Fix podcast playback speed resetting to 1x on downloaded episodes\r\n- Auto-rewind now adjusts for playback speed (10s rewind at 1.5x rewinds 15s of audio)\r\n\r\n### Sync / Offline\r\n- Fix offline book-finish state clobbered on reconnect\r\n- Fix offline listening time not syncing to server stats\r\n- Fix sync retry hammering dead server instead of backing off\r\n\r\n### UI\r\n- Fix home shelves wrongly hidden by \"Hide eBook-only\" setting\r\n- Fix continue-listening cards showing stale progress\r\n- Fix light mode progress time labels on absorbing card\r\n- Fix stale cover art caching\r\n- Use Absorb-style toast for download errors\r\n- Swipe-down on sheets pops current only instead of closing all, stack capped at 3\r\n- Podcast episodes stack under show sheet instead of replacing it\r\n\r\n### Other\r\n- Fix bookmark sync crash on unexpected server data\r\n- Fix podcast overflow menu inaccessible when show has no episodes\r\n- Fix wakelock crash in background and Android Auto\r\n- Add reverse position sort for bookmarks (end to beginning)\r\n- Fix chapter seek while paused jumping back on resume"
+        },
+        {
+          "version": "1.8.67",
+          "buildVersion": "1.8.67",
+          "date": "2026-04-12T18:56:55Z",
+          "downloadURL": "https://github.com/pounat/absorb/releases/download/v1.8.67/alpha-absorb-1.8.67.ipa",
+          "size": 30667666,
+          "localizedDescription": "# v1.8.67\r\n\r\n**Upcoming Releases**\r\n- Fix server crash (OOM) on libraries with very large series (1000+ books)\r\n- Scan continues in the background via foreground service\r\n- Broader series coverage (now includes single-book series)\r\n- Cap Audible lookups to newest 50 entries per series"
+        }
+      ]
+    }
+  ]
+}
