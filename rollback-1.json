@@ -1,0 +1,28 @@
+{
+  "name": "Absorb Rollback 1",
+  "identifier": "com.mclgoerg.absorb-flarestore.rollback-1",
+  "sourceURL": "https://raw.githubusercontent.com/mclgoerg/absorb-flarestore/main/rollback-1.json",
+  "apps": [
+    {
+      "name": "Absorb",
+      "bundleIdentifier": "com.barnabas.absorb",
+      "developerName": "Nathan Poulson",
+      "subtitle": "Audiobookshelf client for iOS",
+      "localizedDescription": "Pinned rollback source for Absorb 1.9.3 (build 237). Add this source temporarily when you want to install this older build.",
+      "iconURL": "https://raw.githubusercontent.com/pounat/absorb/main/assets/icon/app_icon.png",
+      "version": "1.9.3",
+      "buildVersion": "237",
+      "downloadURL": "https://github.com/pounat/absorb/releases/download/v1.9.3-237/absorb-1.9.3-237-pre.ipa",
+      "versions": [
+        {
+          "version": "1.9.3",
+          "buildVersion": "237",
+          "date": "2026-08-17T01:00:40Z",
+          "downloadURL": "https://github.com/pounat/absorb/releases/download/v1.9.3-237/absorb-1.9.3-237-pre.ipa",
+          "size": 42526921,
+          "localizedDescription": "# v1.9.3-237\r\n## Beta 5\r\n\r\n### Scan Series\r\n- Upcoming Releases is now Scan Series: a quick scan for upcoming books, or a deep scan that also finds missing books across every series\r\n- Scans learn which series are finished and skip them, so repeat scans take a fraction of the time\r\n- Get a notification the day a tracked book releases\r\n- Long-press to select several books and request or remove them together\r\n- Link a series by pasting its Audible ASIN when it can't be matched, and a scan report shows what was checked, skipped, or unmatched\r\n- The skipped list opens its actions with a tap and supports multi-select\r\n- Series scanning now works for Audible regions the metadata service doesn't cover, by falling back to the US catalog\r\n\r\n### Cross-device sync\r\n- Progress made on other devices catches up when you come back to the app, even for events missed while it was in the background\r\n- The paused player follows along too, so the card and resume point match where you left off elsewhere\r\n- Books finished on another device leave Absorbing right away\r\n- Progress reaches the server every 20 seconds instead of every minute\r\n\r\n### New\r\n- Cover size setting: small, medium, or large covers across the library, with tablets scaling to match and labels growing with the covers\r\n- Sort podcast episodes by publish date, title, season, episode number, or file name, in either direction\r\n- Reset or extend the sleep timer with a headphone button press during the wind-down\r\n- French language option, plus the latest community translations\r\n- Remove a book's cover and leave it with none\r\n- Pick several books on home or in the library and quick match, mark, or delete them at once\r\n- Admin: scan schedules, metadata source ordering, a server logs screen, and podcast episode limits\r\n- Admin: every Audible region can be picked as a library's metadata provider, plus custom providers from your server\r\n\r\n### Improved\r\n- The generated title card shows on the home shelves and no longer gets cut off on small covers\r\n- Bookmark, history, and chapter times show at your playback speed\r\n- Progress numbers stay readable on tinted home cards\r\n\r\n### Fix\r\n- A book's percentage on the server no longer drifts away from your actual listening position\r\n- Now Playing no longer sticks on the last chapter when rereading a finished book\r\n- Streams no longer cut out for a few seconds every hour\r\n- A stuck player no longer banks hours you never listened or drags your place in a book backwards\r\n- Chromecast reconnects after a background drop instead of dying for good\r\n- The companion ebook downloads with the audiobook, so Read works offline"
+        }
+      ]
+    }
+  ]
+}

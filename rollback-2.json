@@ -1,0 +1,28 @@
+{
+  "name": "Absorb Rollback 2",
+  "identifier": "com.mclgoerg.absorb-flarestore.rollback-2",
+  "sourceURL": "https://raw.githubusercontent.com/mclgoerg/absorb-flarestore/main/rollback-2.json",
+  "apps": [
+    {
+      "name": "Absorb",
+      "bundleIdentifier": "com.barnabas.absorb",
+      "developerName": "Nathan Poulson",
+      "subtitle": "Audiobookshelf client for iOS",
+      "localizedDescription": "Pinned rollback source for Absorb 1.9.3 (build 233). Add this source temporarily when you want to install this older build.",
+      "iconURL": "https://raw.githubusercontent.com/pounat/absorb/main/assets/icon/app_icon.png",
+      "version": "1.9.3",
+      "buildVersion": "233",
+      "downloadURL": "https://github.com/pounat/absorb/releases/download/v1.9.3-233/absorb-1.9.3-233-pre.ipa",
+      "versions": [
+        {
+          "version": "1.9.3",
+          "buildVersion": "233",
+          "date": "2026-08-05T22:16:07Z",
+          "downloadURL": "https://github.com/pounat/absorb/releases/download/v1.9.3-233/absorb-1.9.3-233-pre.ipa",
+          "size": 42238415,
+          "localizedDescription": "# v1.9.3-233\n## Beta 3\n\n### New\n- Short notifications can lower the volume instead of pausing\n- Queue auto-download for a series, show, playlist, or collection\n- Playlists and collections keep the next books downloaded as you listen\n- Delete books and episodes from the server, keeping or removing the files\n- Daily, weekly, and monthly listening goals run at once, with higher targets\n- Pick which day the week starts on\n- Subscribe to a podcast without new episodes filling up Absorbing\n\n### Improved\n- Auto-download list shows real names and collapses into a dropdown\n- Queue management uses more of the screen\n- GitHub release updater downloads the smaller APK made for your device (updating to this build still gets the universal APK, later ones get the build for your device)\n- Auto-delete settings say clearly that only items finished in Absorb are deleted\n- Swipe actions need a longer swipe and buzz before they fire\n- Playing within five minutes of a sleep timer undoes its rewind\n\n### Fix\n- Library switching and the Podcasts tab work when starting offline\n- Playback no longer blips when a login session refreshes\n- Covers load sooner in the full-screen player\n- Books finished on another device leave Absorbing; replayed ones stay\n- Queue auto-download actually downloads\n- Queued books resume where you left off after an auto-advance\n- End of chapter sleep timer stops at the chapter end, including the last one\n- Updating from an older version gets an APK that installs on any phone"
+        }
+      ]
+    }
+  ]
+}
