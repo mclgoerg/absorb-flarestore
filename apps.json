@@ -11,9 +11,17 @@
       "localizedDescription": "A modern cross-platform Audiobookshelf client. This unofficial source tracks IPA files published by the upstream Absorb GitHub releases.",
       "iconURL": "https://raw.githubusercontent.com/pounat/absorb/main/assets/icon/app_icon.png",
       "version": "1.9.3",
-      "buildVersion": "240",
-      "downloadURL": "https://github.com/pounat/absorb/releases/download/v1.9.3-240/absorb-1.9.3-240-pre.ipa",
+      "buildVersion": "242",
+      "downloadURL": "https://github.com/pounat/absorb/releases/download/v1.9.3-242/absorb-1.9.3-242-pre.ipa",
       "versions": [
+        {
+          "version": "1.9.3",
+          "buildVersion": "242",
+          "date": "2026-08-20T17:12:25Z",
+          "downloadURL": "https://github.com/pounat/absorb/releases/download/v1.9.3-242/absorb-1.9.3-242-pre.ipa",
+          "size": 46972639,
+          "localizedDescription": "## Beta 7\r\n\r\n### Transcription\r\n\r\n- **New** - Turn audio bookmarks into text, fully on your device. Pick how much to transcribe 15s - 2min, then fix it up in the bookmark sheet\r\n    - Enable it under settings > Advanced > Transcription and download a model. The Tiny Whisper model is about 31 MB and has been working great for me in testing. \r\n\r\n### Find your spot between audiobook and ebook\r\n\r\n- **Both need the audiobook downloaded, transcription enabled, and an EPUB ebook file on the book.**\r\n- **New** - **While listening,** Pause your audiobook and tap **Find position in ebook.** The ebook will open after a small bit of audio gets transcribed and then searched across the ebook file for a match. \r\n- **New - While reading,** highlight some text and tap the headphones button at the bottom. The app will compare and find that spot in the audio book and start playing it. You can choose to stay in the e-reader or go to the player screen. \r\n- **If a spot can’t be matched confidently by Absorb, nothing moves.** \r\n\r\n### Share quotes\r\n\r\n- **New -** Share an ebook Highlight or an audiobook bookmark-note as a quote rendered over the book cover\r\n    - A few settings to get your share image just right\r\n\r\n### Ebook Reader\r\n\r\n- Find all of your highlights from every book in the **All Bookmarks** page in the settings. \r\n- Reading an ebook uses less battery\r\n\r\n### Settings sync\r\n\r\n- Keep settings in sync across devices through your own WebDAV server. Settings > Backup and sync\r\n    - Requires the folder you want to store the .json file in to already be created\r\n\r\n### iOS\r\n\r\n- Lock screen controls now use your own skip amounts instead of always 10 and 30\r\n    - Apple only has lock screen icons for 5, 10, 15, 30, 45, 60, 75 and 90 - any other amount shows as a \"+\" but still skips what you picked"
+        },
         {
           "version": "1.9.3",
           "buildVersion": "240",
